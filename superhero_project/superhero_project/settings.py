@@ -79,7 +79,7 @@ DATABASES = {
         'NAME': 'superhero_database',
         'USER': 'root',
         'PASSWORD': '123sql456',
-        'HOST': '127.0.0.1;',
+        'HOST': '127.0.0.1',
         'PORT': '3306',
         'OPTIONS': {
             'autocommit': True
