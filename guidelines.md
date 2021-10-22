@@ -1,15 +1,15 @@
 Superhero Creator – Django
 Project points: /55
 
-(5 points) As a developer, I want to make good, consistent commits.
+COMPLETE (5 points) As a developer, I want to make good, consistent commits.
 
-(5 points) As a superhero fan, I want to view a list of superheroes.
+COMPLETE (5 points) As a superhero fan, I want to view a list of superheroes.
 
-(10 points) As a superhero fan, I want to click on a detail button associated with a superhero from the
+COMPLETE (10 points) As a superhero fan, I want to click on a detail button associated with a superhero from the
 list and view that superhero’s name, alter ego, primary superhero ability, secondary superhero ability,
 and catchphrase.
 
-(10 points) As a superhero fan, I want to create a new superhero with a superhero name, alter ego
+COMPLETE (10 points) As a superhero fan, I want to create a new superhero with a superhero name, alter ego
 name, primary superhero ability, secondary superhero ability, and catchphrase.
 
 (10 points) As a superhero fan, I want to edit the superhero name, alter ego name, primary superhero
