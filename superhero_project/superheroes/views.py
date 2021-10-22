@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
+from django.urls.base import reverse_lazy
 from .models import Superhero
 
 # Create your views here.
@@ -40,5 +41,20 @@ def delete(request, hero_id):
         return render(request, 'superheroes/delete.html', context)
     else:
         hero.delete()
-        return HttpResponseRedirect(reverse('superheores:index'))
-        
+        return HttpResponseRedirect(reverse('superheroes:index'))
+
+def edit(request, hero_id):
+    hero = Superhero.objects.get(pk=hero_id)
+    context = {
+        'hero' : hero
+    }
+    if request.method != 'POST':
+        return render(request, 'superheroes/edit.html', context)
+    else:
+        hero.name = request.POST.get('name')
+        hero.alter_ego = request.POST.get('alter_ego')
+        hero.primary_ability = request.POST.get('primary')
+        hero.secondary_ability = request.POST.get('secondary')
+        hero.catch_phrase = request.POST.get('catchphrase')
+        hero.save()
+        return HttpResponseRedirect(reverse('superheroes:index'))
